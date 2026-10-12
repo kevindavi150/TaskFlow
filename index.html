@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+</head>
+<body>
+    <header id="header">
+        <h1>TaskFlow</h1>
+    </header>
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#task-form">Adicionar Tarefa</a></li>
+                <li><a href="#task-list">Lista de Tarefas</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main id="main">
+        <section id="task-form">
+            <h2>Adicionar Tarefa</h2>
+            <form id="add-task-form">
+                <input type="text" id="taskInput" placeholder="Digite a tarefa..." required>
+                <button type="submit" id="add-task-button">Adicionar</button>
+            </form>
+        </section>
+
+        <section id="task-list">
+            <h2>Lista de Tarefas</h2>
+            <ul id="tasks"></ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 TaskFlow. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
