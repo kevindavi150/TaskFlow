@@ -19,6 +19,17 @@ function adicionarTarefa(event) {
     newTask.addEventListener("click", function() {
         newTask.classList.toggle("concluida");
     });
+    const botaoexcluir = document.createElement("button");
+    botaoexcluir.textContent="Excluir";
+    newTask.appendChild(botaoexcluir);
+
+        botaoexcluir.addEventListener("click", function(event) {
+        event.stopPropagation();
+        newTask.remove();
+
+        const filtros = document.querySelectorAll(".filtro");
+        const taskList = document.getElementById("tasks");
+        newTask.classList.toggle("concluida");
+    });
 }
 botao.addEventListener("click", adicionarTarefa);
-
