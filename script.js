@@ -93,6 +93,7 @@ filtros.forEach(function(botaoFiltro) {
         const concluidas = taskList.querySelectorAll("li.concluida").length;
         const pendentes = total - concluidas;
         contador.textContent = `Total de tarefas: ${total}, Concluídas: ${concluidas}, Pendentes: ${pendentes}`;
-    }
- 
-    
+        const progressBar = document.getElementById("progress-bar");
+    const progresso = total > 0 ? (concluidas / total) * 100 : 0;
+    progressBar.style.width = `${progresso}%`;
+    } 
